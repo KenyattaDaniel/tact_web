@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block hero %}
+
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-xs-12 text-left">
+			<h1>About Us</h1>
+			<p>Discover why, how and what we do...</p>
+		</div>
+	</div>
+
+{% endblock hero %}
+
+
+{% block main %}
+	
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-xs-12">
+			<img src="{% static 'img/kdaniel.jpeg'  %}">
+			<strong><p style="font-size: 15px">Kenyatta M. Daniel - Founder</p></strong>
+		</div>
+		<div class="col-lg-8 col-md-8 col-xs-12">
+			<h2>Why We Exist</h2>
+			
+			<p>Thank you for your interest in our firm!</p> 
+
+			<p>We started TacT because of our believe in the potential of island based businesses and non-profit entities to improve their financial performance, achieve their strategic goals and positively contribute to their island communities.</p>
+
+			<p>Our team of accounting professionals and advisors are ready to discuss your needs.</p>
+
+			<a href="{% url 'core:contact' %}"><button type="button">Get in touch.</button></a>
+		</div>
+	</div>
+
+{% endblock main %}
+
+{% block options %}
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<h4>How We're Different</h4>
+			<p>Trust forms the foundation of the relationships we share with our clients and is maintained by adhering to our core values. We deliver on this trust with our technical expertise and embrace of modern technologies.</p>
+		</div>
+
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<h4>What We Do</h4>
+			<p>We provide forward thinking accounting, advisory and tax services to island based businesses and non-profit entities in key industries; supporting their tax & regulatory compliance, improvement of their financial performance and achievement of their goals.</p>
+		</div>
+
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<h4>Our Values</h4>
+			<p>We develop and maintain a circle of trust with our clients by being Credible, Intelligent, Reliable, Clear, Life Long Learners and Ethical (i.e. CIRCLE).</p>
+		</div>
+	</div>
+
+{% endblock options %}

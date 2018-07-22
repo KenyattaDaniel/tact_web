@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.sqlite3
+
+# Virtual Env
+tw_env/
+

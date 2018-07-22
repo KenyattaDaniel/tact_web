@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block hero %}
+
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-xs-12 text-left">
+			<h1>Services</h1>
+			<p>Forward thinking accounting services...</p>
+		</div>
+	</div>
+
+
+{% endblock hero %}
+
+
+{% block main %}
+
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-xs-12">
+			<img src="{% static 'img/team.jpg'  %}">
+		</div>
+		<div class="col-lg-8 col-md-8 col-xs-12">
+			<h2>Leveraging trust, expertise and technology.</h2>
+			<p>At TacT, we focus on supporting the success of your organization. That is why our services combine trust, professional expertise and technology driven processes.</p>
+
+			<p>Our approach allows us to spend more time delivering true value to your organization instead of working ineffeciently and charging you more.</p>
+
+			<a href="{% url 'core:contact' %}"><button type="button">Get in touch.</button></a>
+		</div>
+	</div>
+
+{% endblock main %}
+
+
+{% block options %}
+
+	<div class="row">
+		{% for service in services %}
+			<div class="col-lg-3 col-md-6 col-xs-12 text-left options-listing">
+				<h3>
+					<a href="{% url 'services:service' service.id %}">{{ service }}</a>
+				</h3>
+			</div>
+			{% empty %}
+		{% endfor %}
+	</div>
+	
+{% endblock options %}
