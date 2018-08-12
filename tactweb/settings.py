@@ -50,8 +50,10 @@ INSTALLED_APPS = [
     'bootstrap3',
 
     # Created apps
-    'services',
     'core',
+    'services',
+    'tactics',
+    
 ]
 
 MIDDLEWARE = [

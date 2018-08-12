@@ -20,6 +20,7 @@ from django.conf.urls import include, url
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^services/', include(('services.urls', 'services'), namespace='services')),
+    url(r'^tactics/', include(('tactics.urls', 'tactics'), namespace='tactics')),
     url(r'', include(('core.urls', 'core'), namespace='core')),
 ]
 
