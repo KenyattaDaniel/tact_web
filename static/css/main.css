@@ -63,6 +63,16 @@ NAVIGATION CSS
     background-color: #09223d;
 }
 
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #333;
+    }
+}
+
 /******************
 JUMBOTRON CSS 
 *******************/
