@@ -2,6 +2,7 @@
 MAIN CSS 
 *******************/
 
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -35,7 +36,7 @@ img {
 
 button {
 	margin-top: 25px;
-    background-color: #09223d; /* Green */
+    background-color: #09223d; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -49,9 +50,32 @@ button {
 NAVIGATION CSS
 *******************/
 
+/* navbar */
+.navbar-default {
+    background-color: white;
+    border-color: white;
+}
 
-
-
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #09223d;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #333;
+    }
+}
 
 /******************
 JUMBOTRON CSS 
