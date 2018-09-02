@@ -17,7 +17,7 @@ class Tactic(TimeStampedModel):
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-    image = models.ImageField(upload_to="gallery")
+    image = models.ImageField(upload_to="media")
  
     class Meta:
         ordering = ('-created',)
