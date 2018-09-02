@@ -165,5 +165,5 @@ STATICFILES_DIRS = (
 )
 
 # Media asset configuration
-MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'),)
+MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
