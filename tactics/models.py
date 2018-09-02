@@ -17,9 +17,10 @@ class Tactic(TimeStampedModel):
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
+    image = models.ImageField()
  
     class Meta:
-        ordering = ('created',)
+        ordering = ('-created',)
  
     def __str__(self):
         return self.title

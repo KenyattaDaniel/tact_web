@@ -6,3 +6,6 @@ __pycache__/
 # Virtual Env
 tw_env/
 
+# Media
+media/
+
