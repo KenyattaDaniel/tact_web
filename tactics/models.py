@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from PIL import Image
 
 from core.models import TimeStampedModel
 
