@@ -1,5 +1,8 @@
 from django.db import models
+from django.db.models.signals import pre_save
 from django.contrib.auth.models import User
+from django.utils.text import slugify
+
 from core.models import TimeStampedModel
 
 
@@ -14,7 +17,7 @@ class Service(TimeStampedModel):
     
     def __str__(self):
         '''Return string representation of a service.'''
-        return self.title 
+        return self.title
 
 
 class Offering(TimeStampedModel):
