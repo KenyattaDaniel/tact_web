@@ -4,8 +4,6 @@ from django.http import Http404
 from butter_cms import ButterCMS
 
 
-# from .models import Tactic
-
 client = ButterCMS('bb642c7222ed11498c5aa3d59ab90870ede2e615')
 
 def tactics(request, page=1):
@@ -37,18 +35,3 @@ def tactic(request, slug):
     return render(request, 'tactics/tactic.html', {
         'post': post
     })
-
-
-# def tactics(request):
-#     '''Show all tactics'''
-#     tactics = Tactic.objects.order_by('created')
-#     context = {'tactics': tactics}
-#     return render(request, 'tactics/tactics.html', context)
-
-
-# def tactic(request, tactic_id):
-#     '''Show a single tactic'''
-#     tactic = get_object_or_404(Tactic, id=tactic_id)
-#     # Set context and render necessary template
-#     context = {'tactic': tactic}
-#     return render(request, 'tactics/tactic.html', context)
