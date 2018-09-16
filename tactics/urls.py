@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     url(r'^$', views.tactics, name='tactics'),
     url(r'^page/(?P<page>\d+)$', views.tactics, name='archive'),
-    url(r'^(?P<slug>.*)$', views.tactic, name='blog_post'),
+    url(r'^(?P<slug>.*)$', views.tactic, name='tactic'),
 ]
 
