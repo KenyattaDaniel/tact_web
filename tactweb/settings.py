@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     # Created apps
     'core',
     'services',
-    'tactics',
     
 ]
 
