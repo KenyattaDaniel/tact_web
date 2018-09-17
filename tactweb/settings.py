@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     # Created apps
     'core',
     'services',
+    'tactics',
     
 ]
 
@@ -153,7 +154,7 @@ if os.getcwd() == '/app':
 # Honor the 'X-Forwarded-Proto' header for request.is_secure().
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # Allow all host headers.
 
-ALLOWED_HOSTS = ['tactweb.herokuapp.com']
+ALLOWED_HOSTS = ['tactweb.herokuapp.com','127.0.0.1']
 
 # Static asset configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
