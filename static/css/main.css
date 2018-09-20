@@ -25,12 +25,8 @@ p {
 img {
 	height: auto; 
     width: auto; 
- 
-}
-
-.mainpic img {
-	height: auto; 
-    width: auto; 
+	max-height: 100%; 
+    max-width: 100%; 
 }
 
 button {
@@ -69,6 +65,11 @@ NAVIGATION CSS
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
           color: #333;
     }
+}
+
+#logo {
+    max-height: none; 
+    max-width: none; 
 }
 
 /******************
@@ -142,10 +143,12 @@ SERVICE OPTIONS CSS
 
 
 /******************
-CONTACT CSS
+CONTACT / FOLLOW CSS
 *******************/
 
-
+.addthis_inline_follow_toolbox {
+	float: right;
+}
 
 
 /******************
