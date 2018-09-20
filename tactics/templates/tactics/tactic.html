@@ -10,7 +10,7 @@
 			<!-- Post author + Publish date -->
 			<p style="color: white">Posted by {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.published }}</p>
 			{% for category in post.categories %}
-			<p style="color: white">{{ category.name }}</p>
+			<p style="color: white; font-size: 17px">#{{ category.name }}</p>
 			{% endfor %}
 		</div>
 	</div>
