@@ -42,8 +42,8 @@
 				<a href="{% url 'tactics:tactic' post.slug %}">
 					<img src="{{ post.featured_image }}">
 					<h3>{{ post.title }}</h3>
-					<p>{{ post.summary }}</p>
 					<p>{{ post.published }}</p>
+					<p>{{ post.summary }}</p>
 				</a>
 			</div>
 			{% empty %}
