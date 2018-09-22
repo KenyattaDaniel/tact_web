@@ -38,10 +38,13 @@
 
 	<div class="row">
 		{% for post in recent_posts %}
-			<div class="col-lg-6 col-md-6 col-xs-12">
-				<h3>
-					<a href="{% url 'tactics:tactic' post.slug %}">{{ post.title }}</a>
-				</h3>
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<a href="{% url 'tactics:tactic' post.slug %}">
+					<img src="{{ post.featured_image }}">
+					<h3>{{ post.title }}</h3>
+					<p>{{ post.summary }}</p>
+					<p>{{ post.published }}</p>
+				</a>
 			</div>
 			{% empty %}
 			<h3>Please return soon for new content!</h3>
@@ -51,11 +54,11 @@
 		<!-- Pagination links -->
 		<div>
 		  {% if previous_page %}
-		  <a href="{% url 'tactics:tactic' previous_page %}">Prev</a>
+		  <a href="{% url 'tactics:tactics' previous_page %}">Prev</a>
 		  {% endif %}
 
 		  {% if next_page %}
-		  <a href="{% url 'tactics:tactic' next_page %}">Next</a>
+		  <a href="{% url 'tactics:tactics' next_page %}">Next</a>
 		  {% endif %}
 		</div>	
 	</div>
