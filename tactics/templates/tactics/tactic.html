@@ -7,8 +7,6 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-xs-12">
 			<h1>{{ post.title }}</h1>
-			<!-- Post author + Publish date -->
-			<p style="color: white">Posted by {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.published }}</p>
 			{% for category in post.categories %}
 			<p style="color: white; font-size: 17px">#{{ category.name }}</p>
 			{% endfor %}
@@ -20,6 +18,10 @@
 
 {% block main %}
 	<div class="row">
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<!-- Post author + Publish date -->
+			<p style="color: grey">Posted by {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.published }}</p>
+		</div>
 		<div class="col-lg-8 col-md-8 col-xs-12">
 			<!-- Go to www.addthis.com/dashboard to customize your tools -->
 			<div class="addthis_inline_share_toolbox"></div><br>
