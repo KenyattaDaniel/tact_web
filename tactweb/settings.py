@@ -156,6 +156,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # Allow all host h
 
 ALLOWED_HOSTS = ['www.tactbv.com']
 
+# Redirect automatically to https website version
+SECURE_SSL_REDIRECT = True
+
 # Static asset configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'static'
