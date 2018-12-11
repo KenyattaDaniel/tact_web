@@ -3,10 +3,10 @@
 {% load static %}
 
 {% block hero %}
-
+	
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-xs-12 text-left">
-			<h1>{{ service|title }}</h1>
+			<h1>{{ service.title }}</h1>
 		</div>
 	</div>
 
@@ -14,11 +14,11 @@
 
 
 {% block main %}
+
 	<div class="row">
-		<div class="col-lg-12 col-md-12 col-xs-12">
-			<p>{{ service.desc }}</p>
-		</div>
+		<h2>Packages</h2>
 	</div>
+	<div class="row">
 
 {% endblock main %}
 
@@ -26,14 +26,12 @@
 {% block options %}
 
 	<div class="row">
-		<h3>Areas of focus;</h3>
-	</div>
-	<div class="row">
-		{% for offering in offerings %}
-			<div class="col-lg-6 col-md-6 col-xs-12">
-				<h3>
-					<a href="{% url 'services:offering' offering.id %}">{{ offering }}</a>
-				</h3>
+		{% for package in packages %}
+			<div class="col-lg-3 col-md-3 col-xs-12 text-center" style="border: 1px solid black; margin: 10px 0px 10px 0px">
+				<h3 style="color: #09223d">{{ package.title }}</h3>
+				<p>{{ package.desc }}</p>
+				<h4>{{ package.price }} monthly</h4>
+				<a href="{{ package.url }}"><button type="button">Select</button></a>
 			</div>
 			{% empty %}
 		{% endfor %}

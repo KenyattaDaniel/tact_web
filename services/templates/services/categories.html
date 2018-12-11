@@ -37,10 +37,17 @@
 {% block options %}
 
 	<div class="row">
-		{% for service in services %}
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <h2>Explore</h2>
+        </div>
+    </div>
+
+
+	<div class="row">
+		{% for category in categories %}
 			<div class="col-lg-6 col-md-6 col-xs-12 text-left options-listing">
 				<h3>
-					<a href="{% url 'services:service' service.id %}">{{ service }}</a>
+					<a href="{% url 'services:category' category.id %}">{{ category }}</a>
 				</h3>
 			</div>
 			{% empty %}

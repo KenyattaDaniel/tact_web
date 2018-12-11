@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import Service, Offering
+from .models import Category, Service, Package
 
-class ServiceAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title','owner','created','modified')
     list_filter = ('created','modified','owner')
     search_fields = ('title','owner')
@@ -11,7 +11,7 @@ class ServiceAdmin(admin.ModelAdmin):
     ordering = ['modified', 'created']
 
 
-class OfferingAdmin(admin.ModelAdmin):
+class ServiceAdmin(admin.ModelAdmin):
     list_display = ('title','service', 'owner','created','modified')
     list_filter = ('service','created','modified','owner')
     search_fields = ('title','service','owner', 'service')
@@ -19,5 +19,6 @@ class OfferingAdmin(admin.ModelAdmin):
     date_hierarchy = 'modified'
     ordering = ['modified', 'created']
 
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Service, ServiceAdmin)
-admin.site.register(Offering, OfferingAdmin)
+admin.site.register(Package)
