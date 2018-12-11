@@ -11,7 +11,6 @@ class Category(TimeStampedModel):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True, default='')
     desc = models.TextField()
-    slug = models.SlugField(null=False, blank=True)
 
     class Meta:
         ordering = ('created',)
@@ -20,10 +19,6 @@ class Category(TimeStampedModel):
         '''Return string representation of a category.'''
         return self.title
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Category, self).save(*args, **kwargs)
-
 
 class Service(TimeStampedModel):
     '''A service'''
@@ -31,7 +26,6 @@ class Service(TimeStampedModel):
     service = models.ForeignKey(Category, on_delete=models.CASCADE) # change this to category later
     title = models.CharField(max_length=50, blank=True, default='')
     desc = models.TextField()
-    slug = models.SlugField(null=False, blank=True)
 
     class Meta:
         ordering = ('created',)
@@ -39,10 +33,6 @@ class Service(TimeStampedModel):
     def __str__(self):
         '''Return string representation of a service'''
         return self.title
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Service, self).save(*args, **kwargs)
 
 
 class Package(TimeStampedModel):
