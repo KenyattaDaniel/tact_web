@@ -51,10 +51,6 @@ class Migration(migrations.Migration):
             model_name='offering',
             name='service',
         ),
-        migrations.RemoveField(
-            model_name='service',
-            name='slug',
-        ),
         migrations.DeleteModel(
             name='Offering',
         ),
