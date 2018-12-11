@@ -154,10 +154,10 @@ if os.getcwd() == '/app':
 # Honor the 'X-Forwarded-Proto' header for request.is_secure().
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # Allow all host headers.
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['www.tactbv.com']
 
 # Redirect automatically to https website version
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 
 # Static asset configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
