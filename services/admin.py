@@ -12,8 +12,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title','service', 'owner','created','modified')
-    list_filter = ('service','created','modified','owner')
+    list_display = ('title','category', 'owner','created','modified')
+    list_filter = ('category','created','modified','owner')
     search_fields = ('title','service','owner', 'service')
     raw_id_fields = ('owner',)
     date_hierarchy = 'modified'

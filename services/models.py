@@ -23,7 +23,7 @@ class Category(TimeStampedModel):
 class Service(TimeStampedModel):
     '''A service'''
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    service = models.ForeignKey(Category, on_delete=models.CASCADE) # change this to category later
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True, default='')
     desc = models.TextField()
 
