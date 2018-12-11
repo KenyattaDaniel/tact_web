@@ -62,7 +62,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='service',
             name='category',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='services.Category'),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='services.Category'),
             preserve_default=False,
         ),
     ]
