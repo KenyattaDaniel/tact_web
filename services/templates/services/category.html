@@ -7,6 +7,7 @@
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-xs-12 text-left">
 			<h1>{{ category|title }}</h1>
+			<p>{{ category.subtitle }}</p>
 		</div>
 	</div>
 
@@ -17,15 +18,9 @@
 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-xs-12">
-			<h2>What We Offer</h2>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-xs-12">
 			<p>{{ category.desc }}</p>
 		</div>
 	</div>
-
 
 {% endblock main %}
 
