@@ -35,3 +35,4 @@ def tactic(request, slug):
     return render(request, 'tactics/tactic.html', {
         'post': post
     })
+
