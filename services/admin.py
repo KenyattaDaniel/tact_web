@@ -9,6 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
     raw_id_fields = ('owner',)
     date_hierarchy = 'modified'
     ordering = ['modified', 'created']
+    prepopulated_fields = {'slug':('title',)}
 
 
 class ServiceAdmin(admin.ModelAdmin):
@@ -18,6 +19,7 @@ class ServiceAdmin(admin.ModelAdmin):
     raw_id_fields = ('owner',)
     date_hierarchy = 'modified'
     ordering = ['modified', 'created']
+    prepopulated_fields = {'slug':('title',)}
 
 class PackageAdmin(admin.ModelAdmin):
     list_display = ('title','service', 'owner','created','modified')

@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.contrib.auth.models import User
-from django.utils.text import slugify
+from django.template.defaultfilters import slugify
 
 from core.models import TimeStampedModel
 
@@ -12,13 +12,20 @@ class Category(TimeStampedModel):
     title = models.CharField(max_length=50, blank=True, default='')
     subtitle = models.CharField(max_length=50, blank=True, default='')
     desc = models.TextField()
+    slug = models.SlugField(default='')
+
+    def save(self, *args, **kwargs):
+            # Uncomment if you don't want the slug to change every time the name changes
+            #if self.id is None:
+                    #self.slug = slugify(self.name)
+            self.slug = slugify(self.title)
+            super(Category, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ('created',)
 
     def __str__(self):
-        '''Return string representation of a category.'''
-        return self.title
+            return self.title
 
 
 class Service(TimeStampedModel):
@@ -28,13 +35,20 @@ class Service(TimeStampedModel):
     title = models.CharField(max_length=50, blank=True, default='')
     subtitle = models.CharField(max_length=50, blank=True, default='')
     desc = models.TextField()
+    slug = models.SlugField(default='')
+
+    def save(self, *args, **kwargs):
+        # Uncomment if you don't want the slug to change every time the name changes
+        #if self.id is None:
+                #self.slug = slugify(self.name)
+        self.slug = slugify(self.title)
+        super(Service, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ('created',)
 
     def __str__(self):
-        '''Return string representation of a service'''
-        return self.title
+            return self.title
 
 
 class Package(TimeStampedModel):
