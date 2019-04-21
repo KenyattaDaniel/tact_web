@@ -17,8 +17,9 @@ h2, h3, h4 {
 	color: #676a70;
 }
 
-p {
+a {
 	font-size: 15px;
+
 }
 
 img {
@@ -44,6 +45,7 @@ button {
 a:hover {
 	text-decoration: none;
 }
+
 
 /******************
 NAVIGATION CSS
