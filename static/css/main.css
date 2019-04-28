@@ -27,7 +27,7 @@ img {
 
 button {
 	margin-top: 10px;
-    background-color: #09223d; 
+    background-color: #3a5a8e; 
     border: none;
     color: white;
     padding: 5px 32px;
@@ -48,14 +48,14 @@ NAVIGATION CSS
 
 /* Mobile version */
 .navbar-toggle {
-    border-color: #09223d;
+    border-color: #3a5a8e;
 }
 .navbar-toggle:hover,
 .navbar-toggle:focus {
-    background-color: #09223d;
+    background-color: #3a5a8e;
 }
 .navbar-toggle .icon-bar {
-    background-color: #09223d;
+    background-color: #3a5a8e;
 }
 
 @media (max-width: 767px) {
@@ -80,18 +80,18 @@ JUMBOTRON CSS
 *******************/
 
 .jumbotron {
-	background-color: #f2f2f2;
-	border: 1px solid #09223d;
+	background-color: #3a5a8e;
+	border: 1px solid #3a5a8e;
 	margin-bottom: 30px;
 	height: 250px;
 }
 
 .jumbotron h1 {
-	color: #09223d;
+	color: white;
 }
 
 .jumbotron p {
-	color: gray;
+	color: white;
 }
 
 
@@ -100,7 +100,7 @@ HERO BLOCK CSS
 *******************/
 
 #hero p {
-	font-size: 21px;
+	font-size: 25px;
 }
 
 

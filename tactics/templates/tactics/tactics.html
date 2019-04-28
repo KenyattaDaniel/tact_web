@@ -30,7 +30,7 @@
 
     <div class="row">
         {% for post in recent_posts %}
-            <div class="col-lg-3 col-md-3 col-xs-12 text-left">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-left">
                 <a href="{% url 'tactics:tactic' post.slug %}">
                     <img src="{{ post.featured_image }}" />
                     <h3>{{ post.title }}</h3>
@@ -39,7 +39,7 @@
                 </a>
             </div>
         {% endfor %}
-        <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
             {% if previous_page %}
                 <a href="{% url 'tactics:tactics' previous_page %}">Prev</a>
             {% endif %}
