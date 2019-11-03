@@ -6,6 +6,10 @@ __pycache__/
 # Virtual Env
 tw_env/
 
-# Media
+# SSL
+__certificates__/
+*.csr
+*.key
+*.pem
 
 
