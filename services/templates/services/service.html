@@ -5,7 +5,7 @@
 {% block hero %}
 	
 	<div class="row">
-		<div class="col-lg-6 col-md-6 col-xs-12 text-left">
+		<div class="col-lg-12 col-md-12 col-xs-12 text-left">
 			<h1>{{ service.title }}</h1>
 			<p>{{ service.subtitle }}</p>
 		</div>
@@ -18,7 +18,11 @@
 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-xs-12">
-			<h2>Interested in a Quote?</h2>
+			<h2>{{ service.desc }}</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-xs-12">
 			<quote>*Fee displayed below are average prices that that may be subject to change without notice.</quote></br>
 			<quote>*Final prices are determined based on each clients' specific circumstances and requirements.</quote>
 		</div>
@@ -32,11 +36,11 @@
 
 	<div class="row">
 		{% for package in packages %}
-			<div class="col-lg-3 col-md-3 col-xs-12 text-center" style="border: 1px solid black; margin: 10px 10px 10px 0px">
+			<div class="col-lg-4 col-md-4 col-xs-12 text-center" style="border: 1px solid black; margin: 10px 10px 10px 0px">
 				<h3 style="color: #09223d">{{ package.title }}</h3>
 				<p>{{ package.desc }}</p>
 				<h4>{{ package.price }} {{ package.bill_frequency | lower}}*</h4>
-				<a href="{{ package.url }}"><button type="button">Get a Quote</button></a>
+				<a href="{{ package.url }}"><button type="button">Select</button></a>
 			</div>
 			{% empty %}
 		{% endfor %}

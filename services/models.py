@@ -11,7 +11,7 @@ class Category(TimeStampedModel):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True, default='')
     subtitle = models.CharField(max_length=50, blank=True, default='')
-    desc = models.TextField()
+    desc = models.TextField(blank=True, default='')
     slug = models.SlugField(default='')
 
     def save(self, *args, **kwargs):
@@ -34,7 +34,7 @@ class Service(TimeStampedModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True, default='')
     subtitle = models.CharField(max_length=50, blank=True, default='')
-    desc = models.TextField()
+    desc = models.TextField(blank=True, default='')
     slug = models.SlugField(default='')
 
     def save(self, *args, **kwargs):
@@ -72,7 +72,7 @@ class Package(TimeStampedModel):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True, default='')
-    desc = models.TextField()
+    desc = models.TextField(blank=True, default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     bill_frequency = models.CharField(max_length=10, choices=BILL_FREQUENCY_CHOICES, default=MONTHLY)
     url = models.URLField(max_length=128, db_index=True,unique=True,blank=True)

@@ -5,7 +5,7 @@
 {% block hero %}
 
 	<div class="row">
-		<div class="col-lg-6 col-md-6 col-xs-12 text-left">
+		<div class="col-lg-12 col-md-12 col-xs-12 text-left">
 			<h1>Services</h1>
 			<p>Forward thinking professional services...</p>
 		</div>
@@ -22,14 +22,12 @@
 			<img src="{% static 'img/working.jpg'  %}">
 		</div>
 		<div class="col-lg-8 col-md-8 col-xs-12">
-			<h2>Leveraging trust, expertise and technology.</h2>
+			<h2>Combining trust, expertise and technology.</h2>
 			<p>At TacT, we focus on supporting the success of your organization. That is why our services combine trust, professional expertise and technology driven processes.</p>
 
 			<p>Our approach allows us to spend more time delivering true value to your organization instead of working ineffeciently and charging you more.</p>
 
-			<p>Would you like a meeting to discuss your specific needs? Let's talk!</p>
-
-			<a href="https://tact.timetap.com/" target="_blank"><button type="button">Free Consultation</button></a>
+			<a href="https://tact.timetap.com/" target="_blank"><button type="button">Schedule a Call</button></a>
 		</div>
 	</div>
 
@@ -39,15 +37,15 @@
 {% block options %}
 
 	<div class="row">
-        <div class="col-lg-6 col-md-6 col-xs-12">
-            <h2>Explore</h2>
+        <div class="col-lg-12 col-md-12 col-xs-12 text-left">
+            <h3>Explore our Services</h3>
         </div>
     </div>
 
 
 	<div class="row">
 		{% for category in categories %}
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-left">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left">
 				<h3>
 					<a href="{% url 'services:category' category.slug %}">{{ category.title }}</a>
 				</h3>
